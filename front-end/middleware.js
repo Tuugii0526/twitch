@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getLocale } from "./lib/middleware/getLocale";
 
-const locales = ["en-US", "mn", "ko"];
+const locales = ["en-US", "mn"];
 const defaultLocale = ["en-US"];
 export function middleware(request) {
   // const acceptLanguage = request.headers.get('accept-language');
@@ -15,7 +15,7 @@ export function middleware(request) {
     locales,
     defaultLocale
   );
-  
+
   request.nextUrl.pathname = `/${localLanguage}${pathname}`;
   return NextResponse.redirect(request.nextUrl);
 }

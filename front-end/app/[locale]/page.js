@@ -1,11 +1,9 @@
 import { Nav } from "@/components/nav/Nav";
 
-export default async function Home({params}) {
- const locale=(await params).locale
+export default async function Home() {
   return (
     <div className="w-full">
-       <Nav/>
-       <p>params :{locale}</p>
+       <Nav />
     </div>
   );
 }

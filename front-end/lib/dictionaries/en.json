@@ -1,0 +1,10 @@
+{
+    "nav":{
+        "title":"twitch streamers",
+        "modes":{
+            "all":"all",
+            "online":"online",
+            "offline":"offline"
+        }
+    }
+}

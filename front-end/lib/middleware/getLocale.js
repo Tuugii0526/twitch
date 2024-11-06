@@ -1,8 +1,6 @@
 import { match } from "@formatjs/intl-localematcher"
 import Negotiator from "negotiator"
 export const getLocale=(request,locales,defaultLocale)=>{
-    console.log('locales inside :',locales)
-    console.log('defaultLocale:',defaultLocale)
     const header=request.headers.get('accept-language');
   const languages=  header.split(',')
     .map((lang) => {
